@@ -11,5 +11,7 @@ class WishlistActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+
+
     }
 }
