@@ -22,40 +22,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:textFontWeight="2"
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:background="@drawable/button_shape"
-            android:text="Button" />
+            android:textColor="@color/darkThemeColor"
+            app:icon="@drawable/home_icon"
+            app:iconTint="@color/darkThemeColor"
+            app:backgroundTint="@color/themeColor"
+            android:text="Home" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginStart="10dp"
+            android:layout_weight="1"
             android:background="@drawable/button_shape"
-            android:text="Button" />
+            app:icon="@drawable/list_icon"
+            app:iconTint="@color/darkThemeColor"
+            app:backgroundTint="@color/themeColor"
+            android:text="" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginStart="10dp"
+            android:layout_weight="1"
             android:background="@drawable/button_shape"
-            android:text="Button" />
+            app:icon="@drawable/baseline_textsms_24"
+            app:iconTint="@color/darkThemeColor"
+            app:backgroundTint="@color/themeColor"
+            android:text="" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginStart="10dp"
+            android:layout_weight="1"
             android:background="@drawable/button_shape"
-            android:text="Button" />
+            app:icon="@drawable/baseline_person_24"
+            app:iconTint="@color/darkThemeColor"
+            app:backgroundTint="@color/themeColor"
+            android:text="" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
