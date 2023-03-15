@@ -4,18 +4,21 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.chsb.databinding.ActivitySignUpBinding
 import com.example.chsb.model.User
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import kotlinx.android.synthetic.main.activity_sign_up.*
+
 
 class SignUpActivity : AppCompatActivity() {
     lateinit var users : MutableList<User>
     lateinit var users_data : MutableList<User>
+    lateinit var binding: ActivitySignUpBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
+        setContentView(binding.root)
 
         users = mutableListOf<User>()
         var type = object : TypeToken<List<User>>(){}.type
@@ -25,10 +28,10 @@ class SignUpActivity : AppCompatActivity() {
         var datas = sharedPreferences.getString("users","")
 
 
-        save_changes.setOnClickListener {
-            if (login_org.text != null && email_org.text != null && password_org.text != null){
-                var usern = login_org.text.toString()
-                var userp = password_org.text.toString()
+        binding.saveChanges.setOnClickListener {
+            if (binding.loginOrg.text != null && binding.emailOrg.text != null && binding.passwordOrg.text != null){
+                var usern = binding.loginOrg.text.toString()
+                var userp = binding.passwordOrg.text.toString()
                 var str = sharedPreferences.getString("users","")
                 if (str ==""){
                     users = mutableListOf<User>()
@@ -44,7 +47,7 @@ class SignUpActivity : AppCompatActivity() {
             else Toast.makeText(this, "please fill the blanks", Toast.LENGTH_SHORT).show()
         }
 
-        create_account.setOnClickListener {
+        binding.createAccount.setOnClickListener {
 
             if (datas == ""){
                 users_data = mutableListOf()
