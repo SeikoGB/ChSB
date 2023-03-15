@@ -8,8 +8,6 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        var type = object : TypeToken<List<User>>(){}.type
-        var gson = Gson()
         var sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
 
 
